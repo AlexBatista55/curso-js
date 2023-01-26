@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body{
+            background: pink;
+            color: blueviolet;
+            font: normal 20pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1> Quem é o <strong>amor</strong> da sua vida?</h1>
+    <input type="text" name="txtn1" id="txtn1">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id= "res"> Resultado...</div>
+    <script>
+       var a = 'Cendy'
+        function verificar() {
+    
+            var nome  = document.getElementsByName('txtn1')[0] 
+            var res = document.getElementById('res')
+            var n1 = String (nome.value)
+            var confirm = n1==a?'com certeza':'não'
+            res.innerHTML = `${n1}  ${confirm} é !`
+
+        }
+    </script>
+    
+</body>
+</html>

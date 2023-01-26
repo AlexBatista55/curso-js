@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é Brasileiro?</title>
+</head>
+<body>
+    <h1> Teste para saber se você é brasileiro ou não</h1>
+    <p> Em que país você nasceu?</p>
+    <input type="text" name="nasc1" id="nasc1">
+    <input type="button" value="Analisar..." onclick="Analisar()">
+    <div id="res"></div>
+    <script>
+       
+        function Analisar(){
+        var nasceu = document.getElementById('nasc1')
+        var res = document.querySelector('div#res')
+        var nas = String(nasceu.value)
+            if(nas == 'Brasil'){
+                res.innerHTML = 'Você é <strong>Brasileiro!</strong>'
+            } else{
+                res.innerHTML = 'Você é <strong>Estrangeiro!</strong>'
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>
